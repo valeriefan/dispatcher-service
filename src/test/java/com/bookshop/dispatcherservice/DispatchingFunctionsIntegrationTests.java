@@ -2,7 +2,6 @@ package com.bookshop.dispatcherservice;
 
 import java.util.function.Function;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import reactor.core.publisher.Flux;
 import reactor.test.StepVerifier;
@@ -36,17 +35,4 @@ class DispatchingFunctionsIntegrationTests {
                         dispatchedOrder.equals(new OrderDispatchedMessage(121L)))
                 .verifyComplete();
     }
-
-    @Test
-    void packAndLabelOrder() {
-        Function<OrderAcceptedMessage, Flux<OrderDispatchedMessage>> packAndLabel =
-                catalog.lookup(Function.class, "pack|label");
-        long orderId = 121;
-
-        StepVerifier.create(packAndLabel.apply(new OrderAcceptedMessage(orderId)))
-                .expectNextMatches(dispatchedOrder ->
-                        dispatchedOrder.equals(new OrderDispatchedMessage(orderId)))
-                .verifyComplete();
-    }
-
 }

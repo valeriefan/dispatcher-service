@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.429s</div>
+<div class="counter">0.017s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,7 +79,7 @@
 </thead>
 <tr>
 <td class="success">whenOrderAcceptedThenDispatched()</td>
-<td class="success">0.429s</td>
+<td class="success">0.017s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -87,9 +87,8 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>Standard Commons Logging discovery in action with spring-jcl: please remove commons-logging.jar from classpath in order to avoid potential conflicts
-01:04:11.800 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.bookshop.dispatcherservice.FunctionsStreamIntegrationTests]: FunctionsStreamIntegrationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-01:04:11.845 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.bookshop.dispatcherservice.DispatcherServiceApplication for test class com.bookshop.dispatcherservice.FunctionsStreamIntegrationTests
+<pre>2024-11-16T03:33:12.885+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.bookshop.dispatcherservice.FunctionsStreamIntegrationTests]: FunctionsStreamIntegrationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-11-16T03:33:12.886+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.bookshop.dispatcherservice.DispatcherServiceApplication for test class com.bookshop.dispatcherservice.FunctionsStreamIntegrationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -100,7 +99,7 @@
 
  :: Spring Boot ::                (v3.3.5)
 
-2024-11-16T01:04:12.005+08:00  WARN 75698 --- [dispatcher-service] [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
+2024-11-16T03:33:12.905+08:00  WARN 83637 --- [dispatcher-service] [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
 
 Found multiple occurrences of org.json.JSONObject on the class path:
 
@@ -109,24 +108,34 @@ Found multiple occurrences of org.json.JSONObject on the class path:
 
 You may wish to exclude one of them to ensure predictable runtime behavior
 
-2024-11-16T01:04:12.009+08:00  INFO 75698 --- [dispatcher-service] [    Test worker] c.b.d.FunctionsStreamIntegrationTests    : Starting FunctionsStreamIntegrationTests using Java 17.0.13 with PID 75698 (started by valeriefan in /Users/valeriefan/Desktop/bookshop/dispatcher-service)
-2024-11-16T01:04:12.009+08:00  INFO 75698 --- [dispatcher-service] [    Test worker] c.b.d.FunctionsStreamIntegrationTests    : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2024-11-16T01:04:12.288+08:00  INFO 75698 --- [dispatcher-service] [    Test worker] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
-2024-11-16T01:04:12.292+08:00  INFO 75698 --- [dispatcher-service] [    Test worker] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
-2024-11-16T01:04:12.842+08:00  INFO 75698 --- [dispatcher-service] [    Test worker] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'dispatcher-service.packlabel-in-0' has 1 subscriber(s).
-2024-11-16T01:04:12.869+08:00  INFO 75698 --- [dispatcher-service] [    Test worker] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
-2024-11-16T01:04:12.870+08:00  INFO 75698 --- [dispatcher-service] [    Test worker] o.s.i.channel.PublishSubscribeChannel    : Channel 'dispatcher-service.errorChannel' has 1 subscriber(s).
-2024-11-16T01:04:12.870+08:00  INFO 75698 --- [dispatcher-service] [    Test worker] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
-2024-11-16T01:04:12.872+08:00  INFO 75698 --- [dispatcher-service] [    Test worker] o.s.i.channel.PublishSubscribeChannel    : Channel 'order-dispatched.destination' has 1 subscriber(s).
-2024-11-16T01:04:12.873+08:00  INFO 75698 --- [dispatcher-service] [    Test worker] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'dispatcher-service.packlabel-out-0' has 1 subscriber(s).
-2024-11-16T01:04:12.887+08:00  INFO 75698 --- [dispatcher-service] [    Test worker] o.s.c.stream.binder.BinderErrorChannel   : Channel '96527084.packlabel-in-0.errors' has 1 subscriber(s).
-2024-11-16T01:04:12.887+08:00  INFO 75698 --- [dispatcher-service] [    Test worker] o.s.c.stream.binder.BinderErrorChannel   : Channel '96527084.packlabel-in-0.errors' has 2 subscriber(s).
-2024-11-16T01:04:12.887+08:00  INFO 75698 --- [dispatcher-service] [    Test worker] o.s.i.channel.PublishSubscribeChannel    : Channel 'order-accepted.destination' has 1 subscriber(s).
-2024-11-16T01:04:12.887+08:00  INFO 75698 --- [dispatcher-service] [    Test worker] r$IntegrationBinderInboundChannelAdapter : started org.springframework.cloud.stream.binder.test.TestChannelBinder$IntegrationBinderInboundChannelAdapter@34cf0e80
-2024-11-16T01:04:12.896+08:00  INFO 75698 --- [dispatcher-service] [    Test worker] c.b.d.FunctionsStreamIntegrationTests    : Started FunctionsStreamIntegrationTests in 0.993 seconds (process running for 1.445)
-2024-11-16T01:04:13.263+08:00  INFO 75698 --- [dispatcher-service] [    Test worker] c.b.d.DispatchingFunctions               : The order with id 121 is packed.
-2024-11-16T01:04:13.264+08:00  INFO 75698 --- [dispatcher-service] [    Test worker] c.b.d.DispatchingFunctions               : The order with id 121 is labeled.
-2024-11-16T01:04:13.279+08:00  WARN 75698 --- [dispatcher-service] [    Test worker] o.s.c.s.binder.test.OutputDestination    : !!!While 'receive(long timeout, int bindingIndex)' method may still work it is deprecated no longer supported. It will be removed after 3.1.3 release. Please use 'receive(long timeout, String bindingName)'
+2024-11-16T03:33:12.906+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] c.b.d.FunctionsStreamIntegrationTests    : Starting FunctionsStreamIntegrationTests using Java 17.0.13 with PID 83637 (started by valeriefan in /Users/valeriefan/Desktop/bookshop/dispatcher-service)
+2024-11-16T03:33:12.906+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] c.b.d.FunctionsStreamIntegrationTests    : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-11-16T03:33:12.906+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-11-16T03:33:12.907+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for &quot;http://localhost:8888/dispatcher-service/default&quot;: Connection refused. Will be trying the next url if available
+2024-11-16T03:33:12.907+08:00  WARN 83637 --- [dispatcher-service] [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@144792d5 uris = array&lt;String&gt;['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for &quot;http://localhost:8888/dispatcher-service/default&quot;: Connection refused
+2024-11-16T03:33:12.907+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-11-16T03:33:12.907+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for &quot;http://localhost:8888/dispatcher-service/default&quot;: Connection refused. Will be trying the next url if available
+2024-11-16T03:33:12.907+08:00  WARN 83637 --- [dispatcher-service] [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@1da61a29 uris = array&lt;String&gt;['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for &quot;http://localhost:8888/dispatcher-service/default&quot;: Connection refused
+2024-11-16T03:33:12.907+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-11-16T03:33:12.907+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for &quot;http://localhost:8888/dispatcher-service/default&quot;: Connection refused. Will be trying the next url if available
+2024-11-16T03:33:12.907+08:00  WARN 83637 --- [dispatcher-service] [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@47cf922d uris = array&lt;String&gt;['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for &quot;http://localhost:8888/dispatcher-service/default&quot;: Connection refused
+2024-11-16T03:33:12.954+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2024-11-16T03:33:12.954+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2024-11-16T03:33:12.960+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.cloud.context.scope.GenericScope     : BeanFactory id=90e7b3ea-c1bb-3148-bc89-0448ccb64bfe
+2024-11-16T03:33:13.032+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'dispatcher-service.packlabel-in-0' has 1 subscriber(s).
+2024-11-16T03:33:13.041+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2024-11-16T03:33:13.041+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.i.channel.PublishSubscribeChannel    : Channel 'dispatcher-service.errorChannel' has 1 subscriber(s).
+2024-11-16T03:33:13.041+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2024-11-16T03:33:13.042+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.i.channel.PublishSubscribeChannel    : Channel 'order-dispatched.destination' has 1 subscriber(s).
+2024-11-16T03:33:13.042+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'dispatcher-service.packlabel-out-0' has 1 subscriber(s).
+2024-11-16T03:33:13.042+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.c.stream.binder.BinderErrorChannel   : Channel '157926137.packlabel-in-0.errors' has 1 subscriber(s).
+2024-11-16T03:33:13.042+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.c.stream.binder.BinderErrorChannel   : Channel '157926137.packlabel-in-0.errors' has 2 subscriber(s).
+2024-11-16T03:33:13.043+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.i.channel.PublishSubscribeChannel    : Channel 'order-accepted.destination' has 1 subscriber(s).
+2024-11-16T03:33:13.043+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] r$IntegrationBinderInboundChannelAdapter : started org.springframework.cloud.stream.binder.test.TestChannelBinder$IntegrationBinderInboundChannelAdapter@9cdf13e
+2024-11-16T03:33:13.044+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] c.b.d.FunctionsStreamIntegrationTests    : Started FunctionsStreamIntegrationTests in 0.156 seconds (process running for 2.266)
+2024-11-16T03:33:13.051+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] c.b.d.DispatchingFunctions               : The order with id 121 is packed.
+2024-11-16T03:33:13.051+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] c.b.d.DispatchingFunctions               : The order with id 121 is labeled.
+2024-11-16T03:33:13.058+08:00  WARN 83637 --- [dispatcher-service] [    Test worker] o.s.c.s.binder.test.OutputDestination    : !!!While 'receive(long timeout, int bindingIndex)' method may still work it is deprecated no longer supported. It will be removed after 3.1.3 release. Please use 'receive(long timeout, String bindingName)'
 </pre>
 </span>
 </div>
@@ -138,7 +147,7 @@ You may wish to exclude one of them to ensure predictable runtime behavior
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.10.2</a> at Nov 16, 2024, 1:04:13 AM</p>
+<a href="http://www.gradle.org">Gradle 8.10.2</a> at Nov 16, 2024, 3:33:13 AM</p>
 </div>
 </div>
 </body>

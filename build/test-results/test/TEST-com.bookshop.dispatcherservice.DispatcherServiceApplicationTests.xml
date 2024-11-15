@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.bookshop.dispatcherservice.DispatcherServiceApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-11-15T19:33:12" hostname="ValeriedeMacBook-Pro.local" time="0.003">
+  <properties/>
+  <testcase name="contextLoads()" classname="com.bookshop.dispatcherservice.DispatcherServiceApplicationTests" time="0.003"/>
+  <system-out><![CDATA[2024-11-16T03:33:12.687+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.bookshop.dispatcherservice.DispatcherServiceApplicationTests]: DispatcherServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-11-16T03:33:12.688+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.bookshop.dispatcherservice.DispatcherServiceApplication for test class com.bookshop.dispatcherservice.DispatcherServiceApplicationTests
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.5)
+
+2024-11-16T03:33:12.711+08:00  WARN 83637 --- [dispatcher-service] [    Test worker] ory$DuplicateJsonObjectContextCustomizer : 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/valeriefan/.gradle/caches/modules-2/files-2.1/com.vaadin.external.google/android-json/0.0.20131108.vaadin1/fa26d351fe62a6a17f5cda1287c1c6110dec413f/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/valeriefan/.gradle/caches/modules-2/files-2.1/org.json/json/20240303/ebb88e8fb5122b7506d5cf1d69f1ccdb790d22a/json-20240303.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-11-16T03:33:12.713+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] c.b.d.DispatcherServiceApplicationTests  : Starting DispatcherServiceApplicationTests using Java 17.0.13 with PID 83637 (started by valeriefan in /Users/valeriefan/Desktop/bookshop/dispatcher-service)
+2024-11-16T03:33:12.713+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] c.b.d.DispatcherServiceApplicationTests  : No active profile set, falling back to 1 default profile: "default"
+2024-11-16T03:33:12.714+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-11-16T03:33:12.714+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/dispatcher-service/default": Connection refused. Will be trying the next url if available
+2024-11-16T03:33:12.714+08:00  WARN 83637 --- [dispatcher-service] [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@10466c55 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/dispatcher-service/default": Connection refused
+2024-11-16T03:33:12.714+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-11-16T03:33:12.714+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/dispatcher-service/default": Connection refused. Will be trying the next url if available
+2024-11-16T03:33:12.714+08:00  WARN 83637 --- [dispatcher-service] [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@2a5ed225 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/dispatcher-service/default": Connection refused
+2024-11-16T03:33:12.714+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-11-16T03:33:12.714+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/dispatcher-service/default": Connection refused. Will be trying the next url if available
+2024-11-16T03:33:12.714+08:00  WARN 83637 --- [dispatcher-service] [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@2a525f88 uris = array<String>['http://localhost:8888'], optional = true, profiles = 'default']): I/O error on GET request for "http://localhost:8888/dispatcher-service/default": Connection refused
+2024-11-16T03:33:12.771+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2024-11-16T03:33:12.771+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2024-11-16T03:33:12.773+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.cloud.context.scope.GenericScope     : BeanFactory id=a1592b32-c5f0-3005-b135-53fb7ab12dc7
+2024-11-16T03:33:12.852+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.c.s.binder.DefaultBinderFactory      : Creating binder: rabbit
+2024-11-16T03:33:12.852+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.c.s.binder.DefaultBinderFactory      : Constructing binder child context for rabbit
+2024-11-16T03:33:12.863+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.c.s.binder.DefaultBinderFactory      : Caching the binder: rabbit
+2024-11-16T03:33:12.865+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'dispatcher-service.packlabel-in-0' has 1 subscriber(s).
+2024-11-16T03:33:12.875+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2024-11-16T03:33:12.875+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.i.channel.PublishSubscribeChannel    : Channel 'dispatcher-service.errorChannel' has 1 subscriber(s).
+2024-11-16T03:33:12.875+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2024-11-16T03:33:12.876+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2024-11-16T03:33:12.876+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'dispatcher-service.packlabel-out-0' has 1 subscriber(s).
+2024-11-16T03:33:12.877+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] c.s.b.r.p.RabbitExchangeQueueProvisioner : declaring queue for inbound: order-accepted.dispatcher-service, bound to: order-accepted
+2024-11-16T03:33:12.877+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2024-11-16T03:33:12.878+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2024-11-16T03:33:12.878+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2024-11-16T03:33:12.878+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.c.stream.binder.BinderErrorChannel   : Channel 'rabbit-134963352.packlabel-in-0.errors' has 1 subscriber(s).
+2024-11-16T03:33:12.878+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.c.stream.binder.BinderErrorChannel   : Channel 'rabbit-134963352.packlabel-in-0.errors' has 2 subscriber(s).
+2024-11-16T03:33:12.879+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2024-11-16T03:33:12.879+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.a.r.l.SimpleMessageListenerContainer : Broker not available; cannot force queue declarations during start: java.net.ConnectException: Connection refused
+2024-11-16T03:33:12.879+08:00  INFO 83637 --- [dispatcher-service] [tcher-service-1] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+2024-11-16T03:33:12.879+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] o.s.i.a.i.AmqpInboundChannelAdapter      : started bean 'inbound.order-accepted.dispatcher-service'
+2024-11-16T03:33:12.881+08:00  INFO 83637 --- [dispatcher-service] [    Test worker] c.b.d.DispatcherServiceApplicationTests  : Started DispatcherServiceApplicationTests in 0.191 seconds (process running for 2.103)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
