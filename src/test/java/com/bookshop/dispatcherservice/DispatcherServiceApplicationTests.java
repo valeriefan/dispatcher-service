@@ -1,4 +1,4 @@
-package com.bookshop.dispatcher_service;
+package com.bookshop.dispatcherservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
